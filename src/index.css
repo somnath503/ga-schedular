@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+body {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+/* Custom 3D Floating Animations */
+@keyframes float-tensor {
+  0%, 100% {
+    transform: rotateX(60deg) rotateZ(-45deg) translateY(0px);
+  }
+  50% {
+    transform: rotateX(62deg) rotateZ(-44deg) translateY(-20px);
+  }
+}
+
+@keyframes pulse-clash {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); box-shadow: 0 0 20px rgba(244, 63, 94, 0.6); }
+}
+
+.animate-float-tensor {
+  animation: float-tensor 8s ease-in-out infinite;
+}
+
+.animate-pulse-clash {
+  animation: pulse-clash 2s ease-in-out infinite;
+}
